@@ -1,0 +1,5 @@
+#!/bin/bash -x
+
+export PATH=/usr/bin:/bin:../../bin
+
+app gst sum.st

@@ -1,0 +1,50 @@
+#!/bin/bash
+
+# This is a wrapper for executing an "app" on onyx and its nodes.
+# The onyx $top installation directory is NFS-mounted by the nodes.
+
+# A good way to use it is to copy it to your home bin directory:
+#     $ cd
+#     $ mkdir bin
+#     $ cd bin
+#     $ cp .../pub/bin/app .
+#     $ chmod a+x app
+# If needed, add your bin directory to the value of the PATH
+# variable in your .bashrc and/or .bash_profile files:
+#     export PATH=~/bin:$PATH
+# Now, you should be able to run "apps":
+#     onyxnode11$ cd ~jbuffenb/classes/354/pub/sum/scheme
+#     onyxnode11$ app guile sum.scm
+#     30
+#     onyxnode11$ cd ../prolog 
+#     onyxnode11$ app gprolog --consult-file sum.pl 
+#     ...
+#     30
+#     onyxnode11$ 
+
+Error() {
+    echo "error: $prg: $@" >&2
+    exit 1
+}
+
+prg=${0##*/}
+app=${1##*/} ; shift
+
+case "$app" in
+    guile) d=/usr/local/bin
+	   [ -x $d/$app ] || d=~jbuffenb/classes/354/pub/bin
+	   exec $d/$app "$@" ;;
+esac
+
+top=/usr/local/apps/local
+
+export PATH=$top/bin:$top/usr/bin:$PATH
+export LD_LIBRARY_PATH=$top/lib:$top/lib64:$top/usr/lib:$top/usr/lib64:$LD_LIBRARY_PATH
+
+exe=$(type -p $app)
+[ "$exe" ] || Error "file does not exist: $app"
+
+echo executing: $exe
+exec $app "$@"
+
+

@@ -1,0 +1,4 @@
+I need to download the compiler, from github
+
+kotlinc program.kt -include-runtime -d program.jar
+java -jar program.jar

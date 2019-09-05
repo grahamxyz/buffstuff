@@ -1,0 +1,12 @@
+#!/bin/bash -x
+
+echo "see spud:/usr/local/src/swift/swift.readme"
+exit
+
+export PATH=/usr/local/src/swift/swift-4.1-RELEASE-ubuntu16.10/usr/bin:/usr/bin:/bin
+
+sudo cp /usr/lib64/libedit.so.0 /usr/lib64/libedit.so.2
+
+swiftc -g -o sum sum.swift
+
+sudo rm /usr/lib64/libedit.so.2

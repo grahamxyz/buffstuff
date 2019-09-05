@@ -1,0 +1,13 @@
+#!/bin/bash
+
+f() {
+    local v=2
+    $1
+}
+
+g() {
+    echo $v
+}
+
+v=1
+f g

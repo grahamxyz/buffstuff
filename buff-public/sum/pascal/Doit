@@ -1,0 +1,7 @@
+#!/bin/bash -x
+
+export PATH=/usr/bin:/bin
+
+fpc -osum sum.p
+./sum
+
