@@ -19,7 +19,7 @@ Copies slides.pdf into the top-level folder of this git project. Pushes to githu
 --run.sh
 Calls getbuff.sh and then push.sh, that's it!
 
-###README
+###README.md
 this file
 
 ###slides.pdf
