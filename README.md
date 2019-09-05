@@ -17,15 +17,15 @@ A copy of /home/JBuffenb/classes/354/pub/ on Boise State Onyx network.
 All contents are the work of Jim Buffenbarger, visit his home page @ http://cs.boisestate.edu/~buff/
 
 ### scripts
-..1) getbuff.sh
+..* getbuff.sh
 
 Copies buff's public directory into my local directory. Only copies if there are changes.
 
-..2) push.sh
+..* push.sh
 
 Copies slides.pdf into the top-level folder of this git project. Pushes to github.
 
-..3) run.sh
+..* run.sh
 
 Calls getbuff.sh and then push.sh, that's it!
 
