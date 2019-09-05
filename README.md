@@ -5,7 +5,7 @@ I got tired of running MobaXterm every morning to find the slides.pdf :)
 
 Below is the crontab command. Every day at 6 AM Boise time, buff's changes will be reflected in this repo:
 
-~~~0 6 * * * cd /home/GRAHAMHILL/Documents/github/buffstuff/scripts/ && ./run.sh~~~
+~~~ 0 6 * * * cd /home/GRAHAMHILL/Documents/github/buffstuff/scripts/ && ./run.sh ~~~
 
 Last edited on Sept 5, 2019.
 
