@@ -3,7 +3,7 @@
 
 #copy buff's slides.pdf
 
-cp -u /home/JBuffenb/classes/354/pub/slides/slides.pdf ../
+cp -u ../buff-public/slides/slides.pdf ../
 
 
 
