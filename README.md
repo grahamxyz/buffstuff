@@ -19,10 +19,10 @@ Copies slides.pdf into the top-level folder of this git project. Pushes to githu
 --run.sh
 Calls getbuff.sh and then push.sh, that's it!
 
-###README.md
+### README.md
 this file
 
-###slides.pdf
+### slides.pdf
 this is the content that buff presents in arguably his most popular couse, CS 354.
 It is placed in the top-level directory for easy access.
 
