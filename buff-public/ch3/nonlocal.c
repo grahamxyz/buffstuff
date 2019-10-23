@@ -1,4 +1,4 @@
-// gcc -o nonlocal nonlocal.c && ./nonlocal
+// gcc -Wall -o nonlocal nonlocal.c && ./nonlocal
 
 #include <stdio.h>
 

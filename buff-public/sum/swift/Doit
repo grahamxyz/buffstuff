@@ -1,4 +1,6 @@
-#!/bin/bash -x
+#!/bin/bash
+
+set -x
 
 echo "see spud:/usr/local/src/swift/swift.readme"
 exit
