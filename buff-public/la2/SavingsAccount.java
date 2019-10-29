@@ -9,8 +9,8 @@ public class SavingsAccount extends Account {
     }
 
     public void accrue(double rate) {
-	balance+=balance*rate;
 	interest+=balance*rate;
+	balance+=balance*rate;
     }
 
 }
