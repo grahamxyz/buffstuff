@@ -1,8 +1,8 @@
 #!/bin/bash
 
-set -x
+. ../SetupEnv
 
-export PATH=/usr/bin:/bin
+set -x
 
 gcc -pedantic -o sum sum.c
 ./sum

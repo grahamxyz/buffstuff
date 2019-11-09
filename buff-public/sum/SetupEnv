@@ -1,0 +1,13 @@
+#!/bin/bash
+
+
+export PATH=/usr/local/bin:/usr/bin:/bin
+export LD_LIBRARY_PATH=/usr/local/lib64:/usr/lib64:/lib64
+
+case "$HOSTNAME" in
+    onyx.*)
+	top=/usr/local/apps/local
+	PATH=$top/bin:$top/usr/bin:$PATH
+	LD_LIBRARY_PATH=$top/lib64:$top/usr/lib64:$LD_LIBRARY_PATH
+	;;
+esac

@@ -1,8 +1,8 @@
 #!/bin/bash
 
-set -x
+. ../SetupEnv
 
-export PATH=/usr/bin:/bin
+set -x
 
 gccgo -g -o sum sum.go
 ./sum

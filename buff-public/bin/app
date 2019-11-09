@@ -46,5 +46,3 @@ exe=$(type -p $app)
 
 echo executing: $exe
 exec $app "$@"
-
-
