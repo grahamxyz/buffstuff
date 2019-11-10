@@ -1,6 +1,8 @@
 #!/bin/bash
 
-export PATH=/usr/bin:/bin:../../bin
+. ../SetupEnv
 
-app guile sum.scm
-app guile sumtail.scm
+set -x
+
+guile sum.scm
+guile sumtail.scm

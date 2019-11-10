@@ -1,7 +1,7 @@
 #!/bin/bash
 
+. ../SetupEnv
+
 set -x
 
-export PATH=/usr/bin:/bin:../../bin
-
-app gst sum.st
+gst sum.st

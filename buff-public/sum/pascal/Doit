@@ -1,9 +1,9 @@
 #!/bin/bash
 
+. ../SetupEnv
+
 set -x
 
-export PATH=/usr/bin:/bin
-
-fpc -osum sum.p
+fpc $FPC_ARGS -osum sum.p
 ./sum
 
