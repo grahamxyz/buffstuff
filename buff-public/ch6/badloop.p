@@ -18,7 +18,8 @@ begin
    sum:=0;
    x:=hi;
    for i:=lo to x do begin
-      x:=lo;
+      {i:=x;}
+      {x:=lo;}
       sum:=sum+seq[i]
    end
 end;
