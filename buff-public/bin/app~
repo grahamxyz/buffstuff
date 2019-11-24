@@ -41,8 +41,6 @@ top=/usr/local/apps/local
 export PATH=$top/bin:$top/usr/bin:$PATH
 export LD_LIBRARY_PATH=$top/lib:$top/lib64:$top/usr/lib:$top/usr/lib64:$LD_LIBRARY_PATH
 
-export MONO_CONFIG=$top/etc/mono/config
-
 exe=$(type -p $app)
 [ "$exe" ] || Error "file does not exist: $app"
 
