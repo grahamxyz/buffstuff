@@ -1,8 +1,8 @@
 #!/bin/bash
 
+. ../SetupEnv
+
 set -x
 
-export PATH=/usr/bin:/bin:../../bin
-
-app mcs Sum.cs
-app mono Sum.exe
+mcs Sum.cs
+mono Sum.exe
