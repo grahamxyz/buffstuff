@@ -4,15 +4,15 @@
 # The onyx $top installation directory is NFS-mounted by the nodes.
 
 # A good way to use it is to copy it to your home bin directory:
-#     $ cd
-#     $ mkdir bin
-#     $ cd bin
-#     $ cp .../pub/bin/app .
-#     $ chmod a+x app
+#     onyxnode11$ cd
+#     onyxnode11$ mkdir bin
+#     onyxnode11$ cd bin
+#     onyxnode11$ cp ~jbuffenb/classes/354/pub/bin/app .
+#     onyxnode11$ chmod a+x app
 # If needed, add your bin directory to the value of the PATH
 # variable in your .bashrc and/or .bash_profile files:
 #     export PATH=~/bin:$PATH
-# Now, you should be able to run "apps":
+# Now, you should be able to run apps:
 #     onyxnode11$ cd ~jbuffenb/classes/354/pub/sum/scheme
 #     onyxnode11$ app guile sum.scm
 #     30
