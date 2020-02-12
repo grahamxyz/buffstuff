@@ -125,11 +125,11 @@ public class Scanner {
     // This method determines the kind of the next token (e.g., "id"),
     // and calls a method to scan that token's lexeme (e.g., "foo").
     public boolean next() {
+	many(whitespace);
 	if (done()) {
 	    token=new Token("EOF");
 	    return false;
 	}
-	many(whitespace);
 	String c=program.charAt(pos)+"";
 	if (digits.contains(c))
 	    nextNumber();
