@@ -1,7 +1,7 @@
 // gcc -E -o macro.i macro.c
 
-#define ALLOC(t,v)	  \
-  t v=(t)malloc(sizeof(*v));			\
+#define ALLOC(t,v)	            \
+  t v=(t)malloc(sizeof(*v));        \
   if (!v) printf("malloc() failed")
 
 typedef struct {
