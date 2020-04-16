@@ -1,4 +1,4 @@
-// C# sum program
+// C# OO sum program
 
 public class Sum {
 
