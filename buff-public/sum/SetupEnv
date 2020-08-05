@@ -7,7 +7,7 @@ case "$HOSTNAME" in
     onyx.*)
 	top=/usr/local/apps/local
 	PATH=$top/bin:$top/usr/bin:$PATH
-	LD_LIBRARY_PATH=$top/lib64:$top/usr/lib64:$LD_LIBRARY_PATH
+	LD_LIBRARY_PATH=$top/lib:$top/lib64:$top/usr/lib:$top/usr/lib64:$LD_LIBRARY_PATH
 
 	# fpc pascal compiler
 	# sudo ln -sf $top/usr/lib64/fpc/3.0.4/ppcx64 $top/usr/bin
