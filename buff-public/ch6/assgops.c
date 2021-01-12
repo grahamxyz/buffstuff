@@ -6,9 +6,9 @@ int j=0;
 #include "i.h"
 
 int main() {
-  i++;
-  // i=i+1;
-  printf("%d\n",j);
+  // i++;
+  i=i+1;
+  printf("%d %d\n",i,j);
   return 0;
 }
 

@@ -1,7 +1,5 @@
 #!/bin/bash
 
-. ../SetupEnv
-
 set -x
 
 gst sum.st

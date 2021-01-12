@@ -1,11 +1,15 @@
 #!/bin/bash
 
-. ../SetupEnv
-
 set -x
 
 gccgo -g -o sum sum.go
 ./sum
 
-gccgo -g -o sum sumgo.go
-./sum
+gccgo -g -o sumgo sumgo.go
+./sumgo
+
+gccgo -g -o sumgo1 sumgo1.go
+./sumgo1
+
+gccgo -g -o sumgo2 sumgo2.go
+./sumgo2

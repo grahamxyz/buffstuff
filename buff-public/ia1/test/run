@@ -20,5 +20,6 @@ for t in test-* ; do
     echo ${t##*/}
     [ -f $t/inp ] || > $t/inp
     eval java -cp .. Interpreter "$(Prgs $t/prg*)" < $t/inp > $t/out
-    cmp -s $t/exp $t/out || echo ${t##*/} failed >&2
+    diff -q -w $t/exp $t/out 2>/dev/null || echo ${t##*/} failed >&2
+    # cmp -s $t/exp $t/out || echo ${t##*/} failed >&2
 done

@@ -4,8 +4,6 @@ set -x
 
 # https://doc.rust-lang.org/book/index.html
 
-export PATH=/usr/bin:/bin
-
 rustc sum.rs
 
 ./sum

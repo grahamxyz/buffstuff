@@ -1,10 +1,10 @@
 #!/bin/guile
 !#
 
-(define fff 0)				;"global" variable: ugh!
+(define v 0)				;"global" variable: ugh!
 
-(define (g ff)
-  (set! fff ff))			;assignment "statement": ugh!
+(define (g f)
+  (set! v f))				;assignment "statement": ugh!
 
 (define (closure)
   (let ((i 1))				;early/deep
@@ -15,5 +15,5 @@
 
 (closure)
 (let ((i 2))				;late/shallow
-  (fff))
-(fff)
+  (v))
+(v)

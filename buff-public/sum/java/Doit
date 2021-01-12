@@ -2,8 +2,6 @@
 
 set -x
 
-export PATH=/usr/bin:/bin
-
 javac Sum.java
 java Sum
 

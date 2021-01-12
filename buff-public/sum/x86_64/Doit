@@ -2,10 +2,9 @@
 
 set -x
 
-export PATH=/usr/bin:/bin
-
 # If you uncomment this, it will clobber sum.s
 # gcc -S -o sum.s sum.c
+# gcc -c sum.c -Wa,-adhlns=sum.l -fverbose-asm
 
 as -a=sum.lst -g -o sum.o sum.s
 ld -g -o sum sum.o

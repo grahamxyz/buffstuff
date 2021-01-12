@@ -1,14 +1,16 @@
 #!/bin/bash
 
-f() {
-    local v=2			# late/shallow	
+g() {
+    local i=2			# late/shallow	
     $1
 }
 
-v=1				# early/deep
-
-g() {
-    echo $v
+closure() {
+    local i=1			# early/deep
+    f() {
+	echo $i
+    }
+    g f
 }
 
-f g
+closure

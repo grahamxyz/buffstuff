@@ -11,7 +11,7 @@ Object subclass: Sum [
 	    i:=n.
             seq do: [ :v |
 	       (i>0)
-	           ifTrue: [ s:=s+v. i:=i-1 ].
+	           ifTrue: [ s:=s+v. i:=i-1 ]
 	    ].
             ^s
         ]

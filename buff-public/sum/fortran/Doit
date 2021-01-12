@@ -2,8 +2,6 @@
 
 set -x
 
-export PATH=/usr/bin:/bin
-
 gcc -o sum sum.f -lgfortran
 
 ./sum

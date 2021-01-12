@@ -1,21 +1,18 @@
-/* Go sum program */
-
 package main
 
-import ("fmt")
+import . "fmt"
 
-func sum(seq []int, c chan int) {
+func sum(c chan int, seq []int) {
     s:=0
-    for _, v:=range seq {
+    for _,v:=range seq {
         s+=v
     }
-    c<-s;
+    c<-s
 }
 
 func main() {
     seq:=[]int{5,6,1,8,3,7}
     c:=make(chan int)
-    go sum(seq,c)
-    fmt.Printf("%d\n",<-c)
+    go sum(c,seq)
+	Printf("%d\n",<-c)
 }
-

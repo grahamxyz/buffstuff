@@ -2,8 +2,6 @@
 
 set -x
 
-export PATH=/usr/bin:/bin
-
 ocamlc -o sum sum.ml
 
 ./sum

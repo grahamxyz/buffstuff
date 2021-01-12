@@ -1,9 +1,9 @@
 #!/bin/guile
 !#
 
-(define (g ff)
+(define (g f)
   (let ((i 2))				;late/shallow
-    (ff)))
+    (f)))
 
 (define (closure)
   (let ((i 1))				;early/deep

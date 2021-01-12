@@ -4,6 +4,4 @@ set -x
 
 # sudo dnf install nodejs
 
-export PATH=/usr/bin:/bin
-
 node sum.js

@@ -2,8 +2,6 @@
 
 set -x
 
-export PATH=/usr/bin:/bin
-
 # poor example
 #./sum1
 

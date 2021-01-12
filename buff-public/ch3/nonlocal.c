@@ -1,5 +1,7 @@
 // gcc -Wall -o nonlocal nonlocal.c && ./nonlocal
 
+// NATO: alfa bravo charlie delta echo
+
 #include <stdio.h>
 
 void a() {
