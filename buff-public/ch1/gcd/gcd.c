@@ -1,4 +1,4 @@
-// gcc -o gcd gcd.c && ./gcd
+// gcc -Wall -g -o gcd gcd.c && ./gcd
 
 #include <stdio.h>
 

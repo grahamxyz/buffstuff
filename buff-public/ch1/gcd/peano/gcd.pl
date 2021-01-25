@@ -9,6 +9,7 @@ div(N, G) :- add(M, G, N), div(M, G).
 
 gcd(A, B, G) :- div(A, G), div(B, G).
 
+num5(s(s(s(s(s(0)))))).
 num5(N)  :- N=s(s(s(s(s(0))))).
 num8(N)  :- N=s(s(s(s(s(s(s(s(0)))))))).
 num12(N) :- N=s(s(s(s(s(s(s(s(s(s(s(s(0)))))))))))).
