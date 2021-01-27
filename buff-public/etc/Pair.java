@@ -10,8 +10,8 @@ public class Pair {
     public static Pair cons(Object car, Object cdr)
         { return new Pair(car,cdr); }
 
-    public Object car() { return this.car; }
-    public Object cdr() { return this.cdr; }
+    public Object car() { return car; }
+    public Object cdr() { return cdr; }
 
     public static void main(String[] args) {
 	Pair p=cons(2,3);
