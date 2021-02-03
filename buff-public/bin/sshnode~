@@ -7,8 +7,7 @@ Node() {
 }
 
 timeout="-o ServerAliveCountMax=5 -o ServerAliveInterval=1"
-#  batch="-o BatchMode=yes -o StrictHostKeyChecking=no"
-   batch="-o StrictHostKeyChecking=no"
+  batch="-o BatchMode=yes -o StrictHostKeyChecking=no"
    args="-qtYA $timeout $batch"
 
 until ssh $args $(Node) ; do
