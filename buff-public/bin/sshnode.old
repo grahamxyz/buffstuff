@@ -1,0 +1,15 @@
+#!/bin/bash
+
+Node() {
+    for i in $(seq -f "%02.0f" 0 99 | shuf) ; do
+	ping -n -q -c 1 onyxnode$i >/dev/null 2>&1 && echo onyxnode$i && break
+    done
+}
+
+timeout="-o ServerAliveCountMax=5 -o ServerAliveInterval=1"
+  batch="-o BatchMode=yes -o StrictHostKeyChecking=no"
+   args="-qtYA $timeout $batch"
+
+until ssh $args $(Node) ; do
+    echo trying a different node
+done

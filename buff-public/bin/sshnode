@@ -1,16 +1,27 @@
 #!/bin/bash
 
+base=onyxnode
+
+declare -a Nodes
+
+Nums() { seq -f "%02.0f" 1 99 | shuf ; }
+
 Node() {
-    for i in $(seq -f "%02.0f" 0 99 | shuf) ; do
-	ping -n -q -c 1 onyxnode$i >/dev/null 2>&1 && echo onyxnode$i && break
-    done
+    [ ${#Nodes[@]}=0 ] && readarray -t Nodes < <(Nums)
+    echo $base${Nodes[0]} ; unset Nodes[0]
 }
 
-timeout="-o ServerAliveCountMax=5 -o ServerAliveInterval=1"
-#  batch="-o BatchMode=yes -o StrictHostKeyChecking=no"
-   batch="-o StrictHostKeyChecking=no"
-   args="-qtYA $timeout $batch"
+Ping() { ping -nq -c 1 $1 >/dev/null 2>&1 ; }
 
-until ssh $args $(Node) ; do
-    echo trying a different node
+Ssh() {
+    local timeout="-o ServerAliveCountMax=5 -o ServerAliveInterval=1"
+    local   batch="-o StrictHostKeyChecking=no"
+    local    args="-qtYA $timeout $batch"
+    ssh $args $1
+}
+
+Try() { Ping $1 && Ssh $1 ; }
+
+until Try $(Node) ; do
+    echo trying another node
 done
