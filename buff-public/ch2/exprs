@@ -1,17 +1,17 @@
-expr    -> expr add_op term
+expr     : expr add_op term
 	 | term
 
-term    -> term mult_op factor
+term     : term mult_op factor
 	 | factor
 
-factor  -> id
+factor   : id
 	 | number
 	 | '-' factor
 	 | '(' expr ')'
 
-add_op  -> '+'
+add_op   : '+'
 	 | '-'
 
-mult_op -> '*'
+mult_op  : '*'
 	 | '/'
 
