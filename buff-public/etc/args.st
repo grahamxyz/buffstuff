@@ -1,6 +1,6 @@
 "gst args.st"
 
-"Smalltalk multi-argument sum program"
+"Smalltalk multi-argument class/static sum method"
 
 Object subclass: Sum [
 
