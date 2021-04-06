@@ -1,7 +1,9 @@
 prog:=main
 
+# -fno-require-return-statement
+
 %.pkg: %.go
-	gccgo -fno-require-return-statement -g -c $(filter %.go,$^)
+	gccgo -g -c $(filter %.go,$^)
 
 $(prog):
 	gccgo -g -o $@ *.o
