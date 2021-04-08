@@ -23,6 +23,8 @@
   [[http://zetcode.com/lang/csharp][zetcode Tutorial]]
   [[https://www.mono-project.com/docs][Mono]]
   [[https://www.mono-project.com/docs/gui/winforms][Mono Winforms]]
+* [[https://en.wikipedia.org/wiki/Crystal_(programming_language)][Crystal]]
+  [[https://crystal-lang.org/reference/syntax_and_semantics/index.html][Crystal Specification]]
 * [[https://en.wikipedia.org/wiki/Fortran][Fortran]]
   [[http://www.math-cs.gordon.edu/courses/cs323/FORTRAN/fortran.html][gordon.edu]]
 * [[https://en.wikipedia.org/wiki/Go_(programming_language)][Go]]
