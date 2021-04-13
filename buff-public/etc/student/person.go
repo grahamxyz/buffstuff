@@ -14,18 +14,17 @@ type Person struct {
 
 func NewPerson(name string, age int) (p *Person) {
 	p=new(Person)
-	p.InitPerson(name,age)
+	p.Init(name,age)
 	return
 }
 
-func (p *Person) InitPerson(name string, age int) {
+func (p *Person) Init(name string, age int) {
 	p.name=name
 	p.age=age
 }
 
 func (p *Person) Name() string { return p.name }
 
-func (p *Person) StringPerson() string {
+func (p *Person) String() string {
 	return p.name+" "+Sprintf("%d",p.age)
 }
-func (p *Person) String() string { return p.StringPerson() }
